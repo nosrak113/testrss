@@ -8,6 +8,7 @@ target 'rss' do
 pod 'Realm'
 pod 'RealmSwift'
 pod 'Alamofire'
+pod 'SWXMLHash'
 
 end
 

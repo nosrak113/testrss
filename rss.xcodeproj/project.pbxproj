@@ -12,6 +12,7 @@
 		1B024D421BE95A92000B948B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1B024D411BE95A92000B948B /* Assets.xcassets */; };
 		1B024D451BE95A92000B948B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1B024D431BE95A92000B948B /* LaunchScreen.storyboard */; };
 		1B024D4D1BE95D5B000B948B /* rssViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B024D4C1BE95D5B000B948B /* rssViewController.swift */; };
+		1B024D4F1BE95EC9000B948B /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B024D4E1BE95EC9000B948B /* Network.swift */; };
 		403178EA5339583A3DE963B2 /* Pods_rss.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 97B4498D7B72B05B5A47A937 /* Pods_rss.framework */; };
 /* End PBXBuildFile section */
 
@@ -23,6 +24,7 @@
 		1B024D441BE95A92000B948B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1B024D461BE95A92000B948B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1B024D4C1BE95D5B000B948B /* rssViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = rssViewController.swift; path = Controllers/rssViewController.swift; sourceTree = "<group>"; };
+		1B024D4E1BE95EC9000B948B /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Network.swift; path = Managers/Network.swift; sourceTree = "<group>"; };
 		1B3BACE29D39C58E46EDA002 /* Pods-rss.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rss.release.xcconfig"; path = "Pods/Target Support Files/Pods-rss/Pods-rss.release.xcconfig"; sourceTree = "<group>"; };
 		20B8A677F0B0B516E245C1DC /* Pods-rss.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-rss.debug.xcconfig"; path = "Pods/Target Support Files/Pods-rss/Pods-rss.debug.xcconfig"; sourceTree = "<group>"; };
 		97B4498D7B72B05B5A47A937 /* Pods_rss.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_rss.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -62,6 +64,7 @@
 			isa = PBXGroup;
 			children = (
 				1B024D3A1BE95A92000B948B /* AppDelegate.swift */,
+				1B024D4E1BE95EC9000B948B /* Network.swift */,
 				1B024D4C1BE95D5B000B948B /* rssViewController.swift */,
 				1B024D3E1BE95A92000B948B /* Main.storyboard */,
 				1B024D411BE95A92000B948B /* Assets.xcassets */,
@@ -123,6 +126,11 @@
 				TargetAttributes = {
 					1B024D361BE95A92000B948B = {
 						CreatedOnToolsVersion = 7.1;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -212,6 +220,7 @@
 			files = (
 				1B024D3B1BE95A92000B948B /* AppDelegate.swift in Sources */,
 				1B024D4D1BE95D5B000B948B /* rssViewController.swift in Sources */,
+				1B024D4F1BE95EC9000B948B /* Network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -329,6 +338,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = in.nack.rss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -341,6 +351,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = in.nack.rss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
