@@ -42,7 +42,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     }
     
     func application(application: UIApplication, handleEventsForBackgroundURLSession identifier: String, completionHandler: () -> Void) {
-        NetworkManager.sharedInstance.backgroundCompletionHandler = completionHandler
+        debugPrint("handleEventsForBackgroundURLSession")
+        debugPrint(identifier)
+        NetworkManager.sharedInstance.backgroundManager.backgroundCompletionHandler = completionHandler
     }
 
 

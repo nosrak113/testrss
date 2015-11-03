@@ -12,7 +12,11 @@ import SWXMLHash
 class rssViewController: UIViewController {
     
     override func viewDidAppear(animated: Bool) {
-        NetworkManager.sharedInstance.backgroundManager.request(NetworkManager.sharedInstance.FeedRequest)
+        
+        
+
+        let feedTask =  NetworkManager.sharedInstance.backgroundManager.request(NetworkManager.sharedInstance.FeedRequest)
+        
             .response { (request, responce, data, error) -> Void in
             
             guard error == nil else{
@@ -26,6 +30,8 @@ class rssViewController: UIViewController {
             
 
         }
+        
+        
         
     }
 
